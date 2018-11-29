@@ -11,10 +11,19 @@ Tags: Portfolio, Website
     font-size: 17px;
     --font-heading: "Fjalla One", sans-serif;
     --font-body: "Open Sans", sans-serif;
+    color: #fff;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+    line-height: 50px;
 }
 
 html {
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 *,
@@ -45,3 +54,56 @@ a {
 }
 
 /* Header */
+
+/*header styles */
+
+/*header layout */
+.hero {
+    height: 100vh;
+    background-color: rgb(48, 35, 40);
+}
+
+.hero__name,
+.hero__row {
+    margin: 1rem 2rem;
+}
+
+.hero__wrapper {
+    display: flex;
+    justify-content: space-around;
+    height: 80%;
+    align-items: center;
+}
+
+.hero__content--left {
+    width: 30%;
+}
+
+.hero__content--right {
+    width: 40%;
+    align-self: center;
+}
+
+.hero__heading--large {
+    text-align: center;
+}
+
+.hero__img {
+    display: block;
+    width: 12rem;
+    height: 14rem;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.hero__nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+.hero__row {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
