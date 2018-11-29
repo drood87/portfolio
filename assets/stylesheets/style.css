@@ -5,9 +5,43 @@ Author: Daniel Bernstien
 Author URI: https://github.com/drood87
 Tags: Portfolio, Website
 */
-
-/* Variables */
-
 /* General Styles */
+
+:root {
+    font-size: 17px;
+    --font-heading: "Fjalla One", sans-serif;
+    --font-body: "Open Sans", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+}
+
+p,
+cite,
+a {
+    font-family: var(--font-body);
+}
 
 /* Header */
