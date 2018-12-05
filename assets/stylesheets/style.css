@@ -8,13 +8,11 @@ Tags: Portfolio, Website
 /* General Styles */
 
 :root {
-    font-size: 17px;
+    font-size: 62.5%; /* set's font-size to 1rem = 10px (for easier calculations*/
     --font-heading: "Fjalla One", sans-serif;
     --font-body: "Open Sans", sans-serif;
     color: #fff;
-    letter-spacing: 3px;
-    word-spacing: 3px;
-    line-height: 50px;
+    line-height: 1.5;
 }
 
 html {
@@ -24,6 +22,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    font-family: var(--font-body);
 }
 
 *,
@@ -47,20 +46,24 @@ h3 {
     font-family: var(--font-heading);
 }
 
-p,
-cite,
-a {
-    font-family: var(--font-body);
-}
-
 /* Header */
 
 /*header styles */
 
+.hero__border {
+    border: 1px solid #fff;
+    flex: 3;
+}
+
+.hero__cite {
+    flex: 1;
+}
+
 /*header layout */
 .hero {
     height: 100vh;
-    background-color: rgb(48, 35, 40);
+    background-image: url(../images/hero-background.jpg);
+    background-size: contain;
 }
 
 .hero__name,
@@ -86,6 +89,7 @@ a {
 
 .hero__heading--large {
     text-align: center;
+    font-size: 3rem;
 }
 
 .hero__img {
@@ -106,4 +110,10 @@ a {
     display: flex;
     justify-content: space-between;
     width: 40%;
+}
+
+.hero__cite {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
 }
