@@ -50,70 +50,9 @@ h3 {
 
 /*header styles */
 
-.hero__border {
-    border: 1px solid #fff;
-    flex: 3;
-}
-
-.hero__cite {
-    flex: 1;
-}
-
 /*header layout */
 .hero {
     height: 100vh;
-    background-image: url(../images/hero-background.jpg);
-    background-size: contain;
-}
-
-.hero__name,
-.hero__row {
-    margin: 1rem 2rem;
-}
-
-.hero__wrapper {
-    display: flex;
-    justify-content: space-around;
-    height: 80%;
-    align-items: center;
-}
-
-.hero__content--left {
-    width: 30%;
-}
-
-.hero__content--right {
-    width: 40%;
-    align-self: center;
-}
-
-.hero__heading--large {
-    text-align: center;
-    font-size: 3rem;
-}
-
-.hero__img {
-    display: block;
-    width: 12rem;
-    height: 14rem;
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-.hero__nav {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #000;
-}
-
-.hero__row {
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
-}
-
-.hero__cite {
-    display: flex;
-    align-items: center;
-    max-width: 100%;
+    background-color: #08aeea;
+    background-image: linear-gradient(0deg, #08aeea 0%, #2af598 68%);
 }
