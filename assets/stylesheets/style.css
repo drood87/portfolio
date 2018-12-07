@@ -67,6 +67,7 @@ h3 {
     margin: 0;
     font-size: 6rem;
     letter-spacing: 0.7rem;
+    text-shadow: 1px 1px 20px #8e7575, 1px 8px 11px #11c2d2;
 }
 
 .hero__border {
