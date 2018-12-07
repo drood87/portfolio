@@ -69,6 +69,7 @@ h3 {
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    opacity: 0.9;
 }
 
 .hero__name {
@@ -109,13 +110,16 @@ h3 {
 
 .bio {
     background-color: #0093e9;
-    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+    /* background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%); */
+    background-image: url(../images/section-bg.jpg);
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     /* opacity: 0.7; */
     display: flex;
+    background-size: cover;
+    z-index: 100;
 }
 
 .bio__about-me {
