@@ -1,0 +1,135 @@
+/*
+Name: Daniel Bernstein Website
+Description: This is my personal Website and portfolio
+Author: Daniel Bernstien
+Author URI: https://github.com/drood87
+Tags: Portfolio, Website
+*/
+/* General Styles */
+
+:root {
+    font-size: 62.5%; /* set's font-size to 1rem = 10px (for easier calculations*/
+    --font-heading: "Fjalla One", sans-serif;
+    --font-body: "Open Sans", sans-serif;
+    color: #fff;
+    line-height: 1.5;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    margin: 0;
+    font-size: 6rem;
+}
+
+/* Header */
+
+/*header styles */
+
+/*header layout */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #08aeea;
+    /* Create parrallax effect */
+    background-image: linear-gradient(0deg, #08aeea 0%, #2af598 68%);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.hero__name {
+    margin: 0;
+
+    letter-spacing: 0.7rem;
+    text-shadow: 1px 1px 20px #8e7575, 1px 8px 11px #11c2d2;
+}
+
+.hero__border {
+    border: 2px solid #fff;
+    width: 20%;
+    margin: 3rem;
+}
+
+.hero__jobs {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+.hero__contact {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    font-size: 3rem;
+}
+
+.hero__contact > li {
+    opacity: 0.7;
+    transition: 0.7s;
+}
+
+.hero__contact > li:hover {
+    opacity: 1;
+}
+
+/* Bio Styles + layout */
+
+.bio {
+    background-color: #0093e9;
+    /* background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%); */
+    background-image: url(../images/section-bg.jpg);
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* opacity: 0.7; */
+    display: flex;
+    background-size: cover;
+    z-index: 100;
+}
+
+.bio__about-me {
+    background: rgba(197, 210, 17, 1);
+    height: 50rem;
+    width: 20%;
+    margin: 2rem auto;
+    opacity: 0.7;
+}
+
+.bio__intro {
+    color: black;
+}
