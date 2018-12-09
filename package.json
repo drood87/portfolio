@@ -1,22 +1,22 @@
 {
-  "name": "portfolio",
-  "version": "0.0.1",
-  "description": "Personal Website. Written in HTML5/CSS3/Javascript",
-  "main": "script.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/drood87/portfolio.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/drood87/portfolio/issues"
-  },
-  "homepage": "https://github.com/drood87/portfolio#readme",
-  "dependencies": {
-    "normalize.css": "^8.0.1"
-  }
+    "name": "portfolio",
+    "version": "0.0.1",
+    "description": "Personal Website. Written in HTML5/CSS3/Javascript",
+    "main": "./assets/scripts/script.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/drood87/portfolio.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/drood87/portfolio/issues"
+    },
+    "homepage": "https://github.com/drood87/portfolio#readme",
+    "dependencies": {
+        "normalize.css": "^8.0.1"
+    }
 }

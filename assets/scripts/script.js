@@ -2,6 +2,11 @@ const hero = document.querySelector(".hero");
 const name = hero.querySelector(".hero__name");
 const walk = 30;
 
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load("particles-js", "assets/particles.json", function() {
+    console.log("callback - particles-js config loaded");
+});
+
 function shadow(e) {
     const { offsetHeight: height, offsetWidth: width } = hero;
     let { offsetX: x, offsetY: y } = e;
@@ -22,3 +27,5 @@ function shadow(e) {
 }
 
 hero.addEventListener("mousemove", shadow);
+
+particlesJS();
