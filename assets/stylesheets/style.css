@@ -10,7 +10,8 @@ Tags: Portfolio, Website
 :root {
     font-size: 62.5%; /* set's font-size to 1rem = 10px (for easier calculations*/
     --font-heading: "Fjalla One", sans-serif;
-    --font-body: "Open Sans", sans-serif;
+    --font-subheading: "Open Sans", sans-serif;
+    --font-body: "Raleway", sans-serif;
     color: #fff;
     line-height: 1.5;
 }
@@ -23,7 +24,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: var(--font-body);
+    font-family: var(--font-subheading);
     height: 100%;
 }
 
@@ -69,16 +70,16 @@ h3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 80vh;
 
     /* Create parrallax effect */
-    background-image: url(../images/section2.jpg);
+    background-image: url(../images/smoke.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    opacity: 0.9;
+    /* opacity: 0.9; */
 }
 
 .hero:before {
@@ -88,8 +89,9 @@ h3 {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(0deg, #08aeea 0%, #2af598 60%);
-    opacity: 0.6;
+    background-image: linear-gradient(to top, #bda728 0%, #704307 60%);
+    opacity: 0.2;
+    height: 800vh;
 }
 
 .hero__name {
@@ -145,12 +147,19 @@ h3 {
     background-color: white;
 }
 
+.style__image {
+    background-image: url(../images/section2.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 /* Bio Styles + layout */
 
 .bio {
-    background-color: #0093e9;
+    /* background-color: #0093e9; */
     /* background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%); */
-    background-image: url(../images/section1.jpg);
+    background-image: url(../images/smoke.jpg);
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -159,16 +168,22 @@ h3 {
     background-size: cover;
     z-index: 100;
     text-align: center;
+    /* opacity: 0.9; */
 }
 
 .bio__about-me {
-    background: rgba(197, 210, 17, 0.7);
+    background: #dd5533;
     height: 50rem;
-    width: 20%;
+    width: 40%;
     margin: 2rem auto;
-    /* opacity: 0.7; */
+    opacity: 0.9;
 }
 
 .bio__intro {
-    color: black;
+    color: #fff;
+}
+
+.bio__about {
+    font-size: 2rem;
+    font-family: var(--font-body);
 }
