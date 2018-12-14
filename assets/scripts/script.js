@@ -11,8 +11,6 @@ function shadow(e) {
     const { offsetHeight: height, offsetWidth: width } = hero;
     let { offsetX: x, offsetY: y } = e;
 
-    console.log(e.target);
-
     if (this !== e.target) {
         x = x + e.target.offsetLeft;
         y = y + e.target.offsetTop;
@@ -28,4 +26,8 @@ function shadow(e) {
 
 hero.addEventListener("mousemove", shadow);
 
-// particlesJS();
+function moveBio() {
+    console.log("SCROLL");
+}
+
+window.addEventListener("scroll", moveBio);

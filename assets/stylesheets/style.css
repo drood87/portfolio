@@ -52,34 +52,29 @@ h3 {
     font-size: 6rem;
 }
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: black;
-}
-
 /* Header */
 
 /*header styles */
 
 /*header layout */
+.hero:before {
+    background-image: url(../images/code-img.jpg);
+}
+
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 80vh;
+    height: 100vh;
 
     /* Create parrallax effect */
-    background-image: url(../images/smoke.jpg);
+    background-image: url(../images/code-img.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    /* opacity: 0.9; */
 }
 
 .hero:before {
@@ -89,9 +84,10 @@ h3 {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to top, #bda728 0%, #704307 60%);
+    /* background-image: linear-gradient(to top, #bda728 0%, #704307 60%); */
+    background: linear-gradient(rgb(235, 227, 182), rgb(250, 143, 133));
     opacity: 0.2;
-    height: 800vh;
+    height: 500vh;
 }
 
 .hero__name {
@@ -109,10 +105,12 @@ h3 {
     z-index: 1000;
 }
 
-.hero__border {
+.hero__border,
+.bio__border {
     border: 2px solid #fff;
     width: 20%;
     margin: 3rem;
+    margin: 0 auto;
 }
 
 .hero__jobs {
@@ -157,33 +155,41 @@ h3 {
 /* Bio Styles + layout */
 
 .bio {
-    /* background-color: #0093e9; */
-    /* background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%); */
     background-image: url(../images/smoke.jpg);
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
     background-size: cover;
-    z-index: 100;
     text-align: center;
-    /* opacity: 0.9; */
 }
 
 .bio__about-me {
-    background: #dd5533;
+    border-radius: 5px;
+    background: linear-gradient(
+        to bottom right,
+        rgb(248, 144, 110),
+        rgb(235, 27, 68)
+    );
     height: 50rem;
-    width: 40%;
-    margin: 2rem auto;
-    opacity: 0.9;
+    width: 60%;
+    margin: -15rem auto;
+    opacity: 0.6;
+    padding: 0 20rem 0 20rem;
 }
 
 .bio__intro {
     color: #fff;
+    margin: 5rem 0 0 3rem;
 }
 
 .bio__about {
     font-size: 2rem;
     font-family: var(--font-body);
+}
+
+.bio__border {
+    margin-bottom: 5rem;
 }
