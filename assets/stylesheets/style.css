@@ -113,7 +113,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     width: 180px;
-    font-size: 3rem;
+    font-size: 3rem !important;
     margin: 3rem auto;
 }
 
@@ -198,5 +198,11 @@ h3 {
     display: grid;
     grid-gap: 4rem;
     grid-template-columns: repeat(10, auto);
+    grid-template: 1fr 1fr;
     margin: 5rem;
+    padding: 5rem;
+}
+
+.about__skills > .about__list > i {
+    font-size: 5rem;
 }
