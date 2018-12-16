@@ -13,6 +13,7 @@ Tags: Portfolio, Website
     --font-subheading: "Open Sans", sans-serif;
     --font-body: "Raleway", sans-serif;
     --filter-blur: blur(6px);
+    --border-overlay: 2px solid #fff;
     color: #fff;
     line-height: 1.5;
 }
@@ -91,9 +92,10 @@ h3 {
     transform: rotate(15deg);
     width: 100vw;
     opacity: 0.8;
-    border: 2px solid #fff;
+    border-top: var(--border-overlay);
+    border-left: var(--border-overlay);
     overflow-x: hidden;
-    z-index: 1;
+    z-index: 0;
 }
 
 .hero {
@@ -168,8 +170,8 @@ h3 {
     top: 100vh;
     transform: rotate(-15deg);
     width: 100vw;
-    opacity: 0.8;
-    border: 2px solid #fff;
+    opacity: 0.7;
+    border: var(--border-overlay);
     z-index: -1;
 }
 
@@ -177,15 +179,24 @@ h3 {
     height: 100%;
     border-top: 2px solid #fff;
     overflow: hidden;
-    background-image: url(../images/section-bg.jpg);
+    background-image: linear-gradient(to bottom right, #1e8aba, #808080);
     background-size: cover;
     position: relative;
-    z-index: 0;
+    opacity: 0.9;
 }
 
 .about__wrapper {
-    background-color: rgba(29, 13, 22, 0.7);
+    background-color: rgba(29, 13, 22, 0.8);
     width: 60%;
     margin: 5rem auto;
     z-index: 3;
+}
+
+/* Skills Grid */
+
+.about__skills {
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(10, auto);
+    margin: 5rem;
 }
