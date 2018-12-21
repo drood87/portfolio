@@ -83,8 +83,7 @@ h3 {
 }
 
 .overlay--rotate-right {
-    content: "";
-    height: 120vh;
+    min-height: 120%;
     background-color: #18121e;
     position: absolute;
     top: 0;
@@ -190,19 +189,21 @@ h3 {
     width: 60%;
     margin: 5rem auto;
     z-index: 3;
+    background-attachment: fixed;
 }
 
 /* Skills Grid */
 
 .about__skills {
     display: grid;
-    grid-gap: 4rem;
-    grid-template-columns: repeat(10, auto);
-    grid-template: 1fr 1fr;
+    grid-gap: 14rem;
+    grid-template-columns: repeat(auto-fill, 3rem);
+    grid-template-rows: 1fr;
     margin: 5rem;
     padding: 5rem;
+    text-align: center;
 }
 
 .about__skills > .about__list > i {
-    font-size: 5rem;
+    font-size: 3rem;
 }
