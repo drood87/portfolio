@@ -1,0 +1,193 @@
+/*
+Name: Daniel Bernstein Website
+Description: This is my personal Website and portfolio
+Author: Daniel Bernstien
+Author URI: https://github.com/drood87
+Tags: Portfolio, Website
+*/
+/* General Styles */
+
+$color-white: #fff;
+
+:root {
+    font-size: 62.5%; /* set's font-size to 1rem = 10px (for easier calculations*/
+    --font-heading: "Montserrat", sans-serif;
+    --font-subheading: "Open Sans", sans-serif;
+    --font-body: "Raleway", sans-serif;
+    --filter-blur: blur(6px);
+    --border-overlay: 2px solid $color-white;
+    color: $color-white;
+    line-height: 1.5;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-subheading);
+    height: 100%;
+    overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    margin: 0;
+    font-size: 6rem;
+    letter-spacing: 0.3rem;
+}
+
+/* Header */
+
+/*header styles */
+
+/*header layout */
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(126, 213, 111, 0.8),
+            rgba(40, 180, 133, 0.808)
+        ),
+        url(../images/dean-pugh-710698-unsplash.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    margin: 3rem;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}
+
+.header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.header__logo {
+    height: 35px;
+}
+
+.heading {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading__main {
+    display: block;
+    font-size: 5rem;
+    animation: moveFromTop 1.5s ease-in;
+}
+
+.heading__sub {
+    display: block;
+    font-size: 2rem;
+    animation: moveFromBottom 1.5s ease-in;
+}
+
+.heading__social {
+    display: flex;
+    justify-content: space-around;
+    font-size: 3rem;
+}
+
+.heading__social-icon:link,
+.heading__social-icon:visited {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.heading__social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.heading__social-icon:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
+}
+
+.heading__social-icon::after {
+    font-family: Font Awesome 5 Brands;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.heading__social-icon--github::after {
+    content: "\f09b";
+}
+
+.heading__social-icon--facebook::after {
+    content: "\f082";
+}
+
+.heading__social-icon--twitter::after {
+    content: "\f099";
+}
+
+.heading__social-icon--instagram::after {
+    content: "\f16d";
+}
+
+.heading__social-icon:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+@keyframes moveFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    80% {
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes moveFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
