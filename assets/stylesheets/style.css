@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Name: Daniel Bernstein Website
 Description: This is my personal Website and portfolio
@@ -53,7 +54,7 @@ h3 {
 /*header layout */
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.808)), url(../images/dean-pugh-710698-unsplash.jpg);
+  background-image: linear-gradient(to right bottom, rgba(106, 249, 185, 0.9), rgba(50, 78, 174, 0.9)), url(../images/dean-pugh-710698-unsplash.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -64,7 +65,7 @@ h3 {
     top: 4rem;
     left: 4rem; }
   .header__logo {
-    height: 35px; }
+    height: 3.5rem; }
 
 .heading {
   position: absolute;
@@ -92,10 +93,10 @@ h3 {
     transition: all 0.2s; }
   .social__icons-bar .heading__social-icon:hover {
     transform: translateY(-3px);
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
   .social__icons-bar .heading__social-icon:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0); }
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.2); }
   .social__icons-bar .heading__social-icon::after {
     font-family: Font Awesome 5 Brands;
     font-style: normal;
@@ -107,13 +108,13 @@ h3 {
     z-index: -1;
     transition: all 0.4s; }
   .social__icons-bar .heading__social-icon--github::after {
-    content: "\f09b"; }
+    content: ""; }
   .social__icons-bar .heading__social-icon--facebook::after {
-    content: "\f082"; }
+    content: ""; }
   .social__icons-bar .heading__social-icon--twitter::after {
-    content: "\f099"; }
+    content: ""; }
   .social__icons-bar .heading__social-icon--instagram::after {
-    content: "\f16d"; }
+    content: ""; }
   .social__icons-bar .heading__social-icon:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
@@ -121,9 +122,9 @@ h3 {
 @keyframes moveFromTop {
   0% {
     opacity: 0;
-    transform: translateY(-100px); }
+    transform: translateY(-10rem); }
   80% {
-    transform: translateY(10px); }
+    transform: translateY(1rem); }
   100% {
     opacity: 1;
     transform: translateY(0); } }
@@ -131,9 +132,9 @@ h3 {
 @keyframes moveFromBottom {
   0% {
     opacity: 0;
-    transform: translateY(100px); }
+    transform: translateY(10rem); }
   80% {
-    transform: translateY(-10px); }
+    transform: translateY(-1rem); }
   100% {
     opacity: 1;
     transform: translateY(0); } }
