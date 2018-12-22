@@ -7,6 +7,26 @@ Author URI: https://github.com/drood87
 Tags: Portfolio, Website
 */
 /* General Styles */
+@keyframes moveFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem); }
+  80% {
+    transform: translateY(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  80% {
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 :root {
   font-size: 62.5%;
   /* set's font-size to 1rem = 10px (for easier calculations*/
@@ -24,7 +44,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--font-subheading);
   height: 100%;
   overflow-x: hidden; }
 
@@ -41,6 +60,9 @@ a {
   text-decoration: none;
   color: inherit; }
 
+body {
+  font-family: var(--font-subheading); }
+
 h1,
 h2,
 h3 {
@@ -48,39 +70,6 @@ h3 {
   margin: 0;
   font-size: 6rem;
   letter-spacing: 0.3rem; }
-
-/* Header */
-/*header styles */
-/*header layout */
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(106, 249, 185, 0.9), rgba(50, 78, 174, 0.9)), url(../images/dean-pugh-710698-unsplash.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  margin: 3rem;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-
-.heading {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
-  .heading__primary--main {
-    display: block;
-    font-size: 5rem;
-    animation: moveFromTop 1.5s ease-in; }
-  .heading__primary--sub {
-    display: block;
-    font-size: 2rem;
-    animation: moveFromBottom 1.5s ease-in; }
 
 .social__icons-bar {
   display: flex;
@@ -119,22 +108,32 @@ h3 {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-@keyframes moveFromTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-10rem); }
-  80% {
-    transform: translateY(1rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(106, 249, 185, 0.9), rgba(50, 78, 174, 0.9)), url(../images/dean-pugh-710698-unsplash.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  margin: 3rem;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
 
-@keyframes moveFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(10rem); }
-  80% {
-    transform: translateY(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
+.heading {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  .heading__primary--main {
+    display: block;
+    font-size: 5rem;
+    animation: moveFromTop 1.5s ease-in; }
+  .heading__primary--sub {
+    display: block;
+    font-size: 2rem;
+    animation: moveFromBottom 1.5s ease-in; }

@@ -1,0 +1,17 @@
+.heading {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    &__primary--main {
+        display: block;
+        font-size: 5rem;
+        animation: moveFromTop 1.5s ease-in;
+    }
+    &__primary--sub {
+        display: block;
+        font-size: 2rem;
+        animation: moveFromBottom 1.5s ease-in;
+    }
+}
