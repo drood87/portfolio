@@ -6,12 +6,10 @@
     text-align: center;
     &__primary--main {
         display: block;
-        font-size: 5rem;
         animation: moveFromTop 1.5s ease-in;
     }
     &__primary--sub {
         display: block;
-        font-size: 2rem;
         animation: moveFromBottom 1.5s ease-in;
     }
 }
