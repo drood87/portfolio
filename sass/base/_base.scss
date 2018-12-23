@@ -4,7 +4,6 @@
     --font-body: "Raleway", sans-serif;
     --filter-blur: blur(6px);
     --border-overlay: 2px solid $color-white;
-    color: $color-white;
     line-height: 1.5;
 }
 
@@ -14,10 +13,7 @@ html {
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
+    padding: 3rem;
 }
 
 *,

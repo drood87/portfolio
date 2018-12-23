@@ -1,7 +1,5 @@
 .row {
-    background-color: #eee;
     max-width: $grid-width;
-    color: black;
     margin: 0 auto;
 
     &:not(:last-child) {
@@ -20,18 +18,15 @@
 
     .col-1-of-2 {
         width: calc((100% - #{$grid-gutter-horizontal}) / 2);
-        background-color: #5342de;
     }
 
     .col-1-of-3 {
         width: calc((100% - 2 * (#{$grid-gutter-horizontal})) / 3);
-        background-color: #5342de;
     }
 
     .col-2-of-3 {
         width: calc(
             2 * ((100% - 2 * #{$grid-gutter-horizontal}) / 3) + #{$grid-gutter-horizontal}
         );
-        background-color: #5342df;
     }
 }
