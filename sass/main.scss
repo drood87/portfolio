@@ -8,6 +8,7 @@ Tags: Portfolio, Website
 /* General Styles */
 
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 @import "base/animations";
 @import "base/base";
@@ -16,5 +17,6 @@ Tags: Portfolio, Website
 
 @import "components/social-bar";
 
+@import "layout/grid";
 @import "layout/header";
 @import "layout/heading";
