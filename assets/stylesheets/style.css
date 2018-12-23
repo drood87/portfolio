@@ -136,6 +136,28 @@ h3 {
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(2px); }
 
+.projects {
+  position: relative; }
+  .projects__image {
+    width: 55%;
+    position: absolute;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    height: 17rem;
+    transition: all 0.3s;
+    z-index: 10; }
+    .projects__image--1 {
+      top: -2rem;
+      left: 1.3rem; }
+    .projects__image--2 {
+      right: 0;
+      top: 2rem; }
+    .projects__image--3 {
+      left: 7rem;
+      top: 9rem; }
+    .projects__image:hover {
+      transform: scale(1.2) translateY(-2rem);
+      z-index: 20; }
+
 .social__icons-bar {
   display: flex;
   justify-content: space-around; }

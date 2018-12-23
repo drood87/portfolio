@@ -1,0 +1,32 @@
+.projects {
+    position: relative;
+
+    &__image {
+        width: 55%;
+        position: absolute;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+        height: 17rem;
+        transition: all 0.3s;
+        z-index: 10;
+
+        &--1 {
+            top: -2rem;
+            left: 1.3rem;
+        }
+
+        &--2 {
+            right: 0;
+            top: 2rem;
+        }
+
+        &--3 {
+            left: 7rem;
+            top: 9rem;
+        }
+
+        &:hover {
+            transform: scale(1.2) translateY(-2rem);
+            z-index: 20;
+        }
+    }
+}
