@@ -34,7 +34,6 @@ Tags: Portfolio, Website
   --font-body: "Raleway", sans-serif;
   --filter-blur: blur(6px);
   --border-overlay: 2px solid $color-white;
-  color: #fff;
   line-height: 1.5; }
 
 html {
@@ -42,10 +41,7 @@ html {
   height: 100%; }
 
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden; }
+  padding: 3rem; }
 
 *,
 *:before,
@@ -61,7 +57,8 @@ a {
   color: inherit; }
 
 body {
-  font-family: var(--font-subheading); }
+  font-family: var(--font-subheading);
+  color: #777; }
 
 h1,
 h2,
@@ -72,9 +69,98 @@ h3 {
   letter-spacing: 0.3rem; }
 
 .social__icons-bar {
-  display: flex;
-  justify-content: space-around;
   font-size: 3rem; }
+
+.heading__primary--main {
+  font-size: 5rem; }
+
+.heading__primary--sub {
+  font-size: 2rem; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, rgba(106, 249, 185, 0.9), rgba(50, 78, 174, 0.9));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+  cursor: default; }
+  .heading-secondary:hover {
+    transform: skewX(15deg) skewY(2deg) scale(1.2);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-family: var(--font-body);
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 6rem; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 3px solid rgba(106, 249, 185, 0.9);
+  transition: all 0.5s;
+  padding: 1rem;
+  border-radius: 5px; }
+
+.btn-text:hover {
+  background-image: linear-gradient(to right, rgba(106, 249, 185, 0.9), rgba(50, 78, 174, 0.9));
+  color: #fff;
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.15);
+  border-bottom: none; }
+
+.btn-text:active {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(2px); }
+
+.projects {
+  position: relative; }
+  .projects__image {
+    width: 55%;
+    position: absolute;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    height: 17rem;
+    transition: all 0.3s;
+    z-index: 10; }
+    .projects__image--1 {
+      top: -2rem;
+      left: 1.3rem; }
+    .projects__image--2 {
+      right: 0;
+      top: 2rem; }
+    .projects__image--3 {
+      left: 7rem;
+      top: 9rem; }
+    .projects__image:hover {
+      transform: scale(1.2) translateY(-2rem);
+      z-index: 20; }
+
+.social__icons-bar {
+  display: flex;
+  justify-content: space-around; }
   .social__icons-bar .heading__social-icon:link, .social__icons-bar .heading__social-icon:visited {
     display: inline-block;
     text-decoration: none;
@@ -108,14 +194,34 @@ h3 {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 6rem; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 8rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 8rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * (8rem)) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 8rem) / 3) + 8rem); }
+
 .header {
   height: 95vh;
+  color: #fff;
   background-image: linear-gradient(to right bottom, rgba(106, 249, 185, 0.9), rgba(50, 78, 174, 0.9)), url(../images/dean-pugh-710698-unsplash.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
-  margin: 3rem;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -131,9 +237,12 @@ h3 {
   text-align: center; }
   .heading__primary--main {
     display: block;
-    font-size: 5rem;
     animation: moveFromTop 1.5s ease-in; }
   .heading__primary--sub {
     display: block;
-    font-size: 2rem;
     animation: moveFromBottom 1.5s ease-in; }
+
+.about-me {
+  padding: 25rem 0;
+  background-color: #f7f7f7;
+  margin-top: -25vh; }

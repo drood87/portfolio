@@ -8,13 +8,19 @@ Tags: Portfolio, Website
 /* General Styles */
 
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 @import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/btn";
+@import "components/project-gallery";
 @import "components/social-bar";
 
+@import "layout/grid";
 @import "layout/header";
 @import "layout/heading";
+
+@import "pages/home";
