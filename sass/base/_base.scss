@@ -1,0 +1,37 @@
+:root {
+    font-size: 62.5%; /* set's font-size to 1rem = 10px (for easier calculations*/
+    --font-subheading: "Open Sans", sans-serif;
+    --font-body: "Raleway", sans-serif;
+    --filter-blur: blur(6px);
+    --border-overlay: 2px solid $color-white;
+    color: $color-white;
+    line-height: 1.5;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

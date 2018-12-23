@@ -1,0 +1,15 @@
+.heading {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    &__primary--main {
+        display: block;
+        animation: moveFromTop 1.5s ease-in;
+    }
+    &__primary--sub {
+        display: block;
+        animation: moveFromBottom 1.5s ease-in;
+    }
+}

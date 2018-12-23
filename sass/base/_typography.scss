@@ -1,0 +1,26 @@
+body {
+    font-family: var(--font-subheading);
+}
+
+h1,
+h2,
+h3 {
+    font-family: $font-heading;
+    margin: 0;
+    font-size: 6rem;
+    letter-spacing: 0.3rem;
+}
+
+.social__icons-bar {
+    font-size: 3rem;
+}
+
+.heading {
+    &__primary--main {
+        font-size: 5rem;
+    }
+
+    &__primary--sub {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,22 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+            to right bottom,
+            $color-primary-greenish,
+            $color-secondary-blueish
+        ),
+        url(../images/dean-pugh-710698-unsplash.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    margin: 3rem;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo {
+        height: 3.5rem;
+    }
+}

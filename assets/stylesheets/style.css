@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Name: Daniel Bernstein Website
 Description: This is my personal Website and portfolio
@@ -6,169 +7,133 @@ Author URI: https://github.com/drood87
 Tags: Portfolio, Website
 */
 /* General Styles */
+@keyframes moveFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem); }
+  80% {
+    transform: translateY(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  80% {
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 :root {
-    font-size: 62.5%; /* set's font-size to 1rem = 10px (for easier calculations*/
-    --font-heading: "Fjalla One", sans-serif;
-    --font-body: "Open Sans", sans-serif;
-    color: #fff;
-    line-height: 1.5;
-}
+  font-size: 62.5%;
+  /* set's font-size to 1rem = 10px (for easier calculations*/
+  --font-subheading: "Open Sans", sans-serif;
+  --font-body: "Raleway", sans-serif;
+  --filter-blur: blur(6px);
+  --border-overlay: 2px solid $color-white;
+  color: #fff;
+  line-height: 1.5; }
 
 html {
-    box-sizing: border-box;
-    height: 100%;
-}
+  box-sizing: border-box;
+  height: 100%; }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-body);
-    height: 100%;
-}
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 ul {
-    list-style: none;
-    padding-left: 0;
-}
+  list-style: none;
+  padding-left: 0; }
 
 a {
-    text-decoration: none;
-    color: inherit;
-}
+  text-decoration: none;
+  color: inherit; }
+
+body {
+  font-family: var(--font-subheading); }
 
 h1,
 h2,
 h3 {
-    font-family: var(--font-heading);
-    margin: 0;
-    font-size: 6rem;
-}
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-size: 6rem;
+  letter-spacing: 0.3rem; }
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: black;
-}
-
-/* Header */
-
-/*header styles */
-
-/*header layout */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-
-    /* Create parrallax effect */
-    background-image: url(../images/section2.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    opacity: 0.9;
-}
-
-.hero:before {
-    content: "";
+.social__icons-bar {
+  display: flex;
+  justify-content: space-around;
+  font-size: 3rem; }
+  .social__icons-bar .heading__social-icon:link, .social__icons-bar .heading__social-icon:visited {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s; }
+  .social__icons-bar .heading__social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .social__icons-bar .heading__social-icon:active {
+    transform: translateY(-1px);
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .social__icons-bar .heading__social-icon::after {
+    font-family: Font Awesome 5 Brands;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    background-image: linear-gradient(0deg, #08aeea 0%, #2af598 60%);
-    opacity: 0.6;
-}
+    z-index: -1;
+    transition: all 0.4s; }
+  .social__icons-bar .heading__social-icon--github::after {
+    content: ""; }
+  .social__icons-bar .heading__social-icon--facebook::after {
+    content: ""; }
+  .social__icons-bar .heading__social-icon--twitter::after {
+    content: ""; }
+  .social__icons-bar .heading__social-icon--instagram::after {
+    content: ""; }
+  .social__icons-bar .heading__social-icon:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
-.hero__name {
-    margin: 0;
-    letter-spacing: 0.7rem;
-    text-shadow: 1px 1px 20px #8e7575, 1px 8px 11px #11c2d2;
-    z-index: 1000;
-}
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(106, 249, 185, 0.9), rgba(50, 78, 174, 0.9)), url(../images/dean-pugh-710698-unsplash.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  margin: 3rem;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
 
-.hero__name,
-.hero__border,
-.hero__jobs,
-.hero__contact,
-.hero__quote {
-    z-index: 1000;
-}
-
-.hero__border {
-    border: 2px solid #fff;
-    width: 20%;
-    margin: 3rem;
-}
-
-.hero__jobs {
+.heading {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  .heading__primary--main {
+    display: block;
+    font-size: 5rem;
+    animation: moveFromTop 1.5s ease-in; }
+  .heading__primary--sub {
+    display: block;
     font-size: 2rem;
-    letter-spacing: 0.2rem;
-}
-
-.hero__contact {
-    display: flex;
-    justify-content: space-between;
-    width: 180px;
-    font-size: 3rem;
-}
-
-.hero__contact > li {
-    opacity: 0.7;
-    transition: 0.7s;
-    -webkit-box-shadow: 6px 6px 89px -16px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 6px 89px -16px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 6px 89px -16px rgba(0, 0, 0, 0.75);
-}
-
-.hero__contact > li:hover {
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-.btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: white;
-}
-
-/* Bio Styles + layout */
-
-.bio {
-    background-color: #0093e9;
-    /* background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%); */
-    background-image: url(../images/section1.jpg);
-    height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    background-size: cover;
-    z-index: 100;
-    text-align: center;
-}
-
-.bio__about-me {
-    background: rgba(197, 210, 17, 0.7);
-    height: 50rem;
-    width: 20%;
-    margin: 2rem auto;
-    /* opacity: 0.7; */
-}
-
-.bio__intro {
-    color: black;
-}
+    animation: moveFromBottom 1.5s ease-in; }
