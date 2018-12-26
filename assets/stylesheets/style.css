@@ -115,6 +115,33 @@ h3 {
 .u-margin-bottom-big {
   margin-bottom: 12rem; }
 
+.btn:visited, .btn:link {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 100px;
+  position: relative;
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  transition: all 0.3s; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6); }
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
   display: inline-block;
@@ -140,7 +167,8 @@ h3 {
   -moz-perspective: 150rem;
   height: 63rem;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  font-family: "Raleway", sans-serif; }
   .card__side {
     width: 100%;
     border-radius: 3px;
@@ -210,6 +238,20 @@ h3 {
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; }
+    .card__cta__price-box {
+      padding: 5rem;
+      color: #fff;
+      margin-bottom: 5rem; }
+    .card__cta__price-only {
+      font-size: 1.5rem; }
+    .card__cta__price-value {
+      font-size: 6rem; }
 
 .projects {
   position: relative; }
