@@ -1,5 +1,24 @@
-.about-me {
+.section__about-me {
     padding: 25rem 0;
     background-color: $color-grey-light-1;
     margin-top: -25vh;
+}
+
+.section__services {
+    padding: 20rem 0;
+    margin-top: -15rem;
+    background-image: linear-gradient(
+            to right bottom,
+            $color-primary-greenish,
+            $color-secondary-blueish
+        ),
+        url(../images/fotis.jpg);
+    background-size: cover;
+    transform: skewY(-5deg);
+    & > * {
+        transform: skewY(5deg);
+    }
+}
+.section__recent-work {
+    padding: 25rem 0;
 }

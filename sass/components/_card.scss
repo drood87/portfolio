@@ -1,0 +1,13 @@
+.card {
+    height: 50rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+
+    &__side {
+        position: absolute;
+        color: #fff;
+        height: 50rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    }
+}
