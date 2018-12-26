@@ -1,0 +1,16 @@
+.service-box {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    border-radius: 3px;
+    background-color: rgba($color-white, 0.6);
+    box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    transition: all 0.2s;
+    &__icon {
+        font-size: 4rem;
+    }
+
+    &:hover {
+        transform: scale(1.1) translateY(-2rem);
+    }
+}
