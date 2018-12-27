@@ -5,6 +5,7 @@
 	position: relative;
 	text-align: center;
 	font-family: $font-body;
+	border-radius: 5px;
 
 	&__side {
 		width: 100%;
@@ -94,9 +95,11 @@
 		transform: rotateY(0);
 	}
 	&__picture {
-		background-size: contain;
+		background-size: cover;
 		height: 23rem;
 		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
 		&--1 {
 			background-image: linear-gradient(
 					to right bottom,
@@ -144,16 +147,16 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 90%;
-		&__price-box {
-			padding: 5rem;
-			color: $color-white;
-			margin-bottom: 5rem;
-		}
-		&__price-only {
-			font-size: 1.5rem;
-		}
-		&__price-value {
-			font-size: 6.3rem;
-		}
+		color: $color-white;
+	}
+	&__price-box {
+		padding: 2rem;
+		margin-bottom: 2rem;
+	}
+	&__price-only {
+		font-size: 1.5rem;
+	}
+	&__price-value {
+		font-size: 6.3rem;
 	}
 }

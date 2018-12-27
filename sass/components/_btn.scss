@@ -17,6 +17,7 @@
 		box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
 		&::after {
 			transform: scaleX(1.4) scaleY(1.6);
+			opacity: 0;
 		}
 	}
 
@@ -31,6 +32,26 @@
 		&::after {
 			background-color: $color-white;
 		}
+	}
+
+	&--blue {
+		background-color: $color-secondary-blueish;
+		color: $color-white;
+		&::after {
+			background-color: $color-secondary-blueish;
+		}
+	}
+	&::after {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		border-radius: 10rem;
+		transition: all 0.4s;
+		z-index: -1;
 	}
 }
 
