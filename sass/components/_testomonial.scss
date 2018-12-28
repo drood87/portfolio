@@ -1,5 +1,5 @@
 .testomonial {
-	width: 70%;
+	width: 75%;
 	background-color: #fff;
 	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.12);
 	font-size: $primary-font-size;
@@ -8,6 +8,7 @@
 	transform: skewX(-15deg);
 	border-radius: 5px;
 	position: relative;
+	backface-visibility: hidden;
 
 	&__shape {
 		width: 15rem;

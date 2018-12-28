@@ -354,7 +354,7 @@ h3 {
     opacity: 0; }
 
 .testomonial {
-  width: 70%;
+  width: 75%;
   background-color: #fff;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.12);
   font-size: 1.6rem;
@@ -362,7 +362,8 @@ h3 {
   padding: 6rem;
   transform: skewX(-15deg);
   border-radius: 5px;
-  position: relative; }
+  position: relative;
+  backface-visibility: hidden; }
   .testomonial__shape {
     width: 15rem;
     height: 15rem;
