@@ -7,6 +7,7 @@
 	padding: 6rem;
 	transform: skewX(-15deg);
 	border-radius: 5px;
+	position: relative;
 
 	&__shape {
 		width: 15rem;
@@ -22,14 +23,37 @@
 	&__image {
 		height: 100%;
 		width: 100%;
-		// transform: skewX(15deg);
+		transform: scale(1.1);
+		transition: all 0.5s;
 	}
 
 	&__text {
 		transform: skewX(15deg);
 	}
 
-	&:not(:last-child) {
-		margin-bottom: 5rem;
+	&__caption {
+		position: absolute;
+		color: $color-white;
+		text-align: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 20%);
+		opacity: 0;
+		transition: all 0.5s;
+		font-size: 1.7rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		backface-visibility: hidden;
+		letter-spacing: 3px;
+	}
+
+	&:hover &__caption {
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
+
+	&:hover &__image {
+		transform: scale(1.4);
+		filter: blur(3px) brightness(80%);
 	}
 }
