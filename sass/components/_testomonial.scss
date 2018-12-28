@@ -1,0 +1,35 @@
+.testomonial {
+	width: 70%;
+	background-color: #fff;
+	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.12);
+	font-size: $primary-font-size;
+	margin: auto;
+	padding: 6rem;
+	transform: skewX(-15deg);
+	border-radius: 5px;
+
+	&__shape {
+		width: 15rem;
+		height: 15rem;
+		float: left;
+		-webkit-clip-path: circle(50% at 50% 50%);
+		clip-path: circle(50% at 50% 50%);
+		shape-outside: circle(50% at 50% 50%);
+		-webkit-shape-outside: circle(50% at 50% 50%);
+		transform: translateX(-2rem) skewX(15deg);
+	}
+
+	&__image {
+		height: 100%;
+		width: 100%;
+		// transform: skewX(15deg);
+	}
+
+	&__text {
+		transform: skewX(15deg);
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 5rem;
+	}
+}
