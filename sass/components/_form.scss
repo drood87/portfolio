@@ -1,0 +1,46 @@
+.form {
+	&__group:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	&__input {
+		width: 90%;
+		display: block;
+		padding: 1.5rem 2rem;
+		font-size: 1.5rem;
+		color: inherit;
+		font-family: inherit;
+		background-color: rgba($color-white, 0.5);
+		border-bottom: 3px solid transparent; // to avoid the element of getting pushed down when the other one is focused.
+		border-radius: 2px;
+		border: none;
+
+		&:focus {
+			outline: none;
+			border-bottom: 3px solid $color-primary-greenish;
+			box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+		}
+
+		&:focus:invalid {
+			border-bottom: 3px solid $color-secondary-yellow;
+		}
+
+		&::-webkit-input-placeholder {
+			color: $color-grey-dark-2;
+		}
+	}
+
+	&__label {
+		font-size: 1.1rem;
+		font-weight: 700;
+		margin-left: 1.8rem;
+		margin-top: 1.5rem;
+		transition: all 0.5s;
+		display: block;
+	}
+	&__input:placeholder-shown + &__label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-5rem);
+	}
+}

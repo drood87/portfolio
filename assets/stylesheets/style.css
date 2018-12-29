@@ -288,6 +288,42 @@ h3 {
   .card__price-value {
     font-size: 6.3rem; }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  width: 90%;
+  display: block;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  color: inherit;
+  font-family: inherit;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 3px solid transparent;
+  border-radius: 2px;
+  border: none; }
+  .form__input:focus {
+    outline: none;
+    border-bottom: 3px solid rgba(106, 249, 185, 0.9);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #fecf27; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 1.8rem;
+  margin-top: 1.5rem;
+  transition: all 0.5s;
+  display: block; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5rem); }
+
 .projects {
   position: relative; }
   .projects__image {
@@ -497,3 +533,6 @@ h3 {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/form1.jpg);
   background-size: 100%;
   height: 50rem; }
+  .contact__form {
+    width: 50%;
+    padding: 6rem; }
