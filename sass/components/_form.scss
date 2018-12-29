@@ -12,7 +12,7 @@
 		font-family: inherit;
 		background-color: rgba($color-white, 0.5);
 		border-bottom: 3px solid transparent; // to avoid the element of getting pushed down when the other one is focused.
-		border-radius: 2px;
+		border-radius: 5px;
 		border: none;
 
 		&:focus {

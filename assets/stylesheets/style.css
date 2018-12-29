@@ -303,7 +303,7 @@ h3 {
   font-family: inherit;
   background-color: rgba(255, 255, 255, 0.5);
   border-bottom: 3px solid transparent;
-  border-radius: 2px;
+  border-radius: 5px;
   border: none; }
   .form__input:focus {
     outline: none;
@@ -528,7 +528,7 @@ h3 {
     top: 4rem;
     left: 4rem; }
   .header__logo {
-    height: 3.5rem; }
+    height: 9.5rem; }
 
 .heading {
   position: absolute;
@@ -573,6 +573,7 @@ h3 {
 .contact {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/form1.jpg);
   background-size: 100%;
+  border-radius: 3px;
   height: 50rem; }
   .contact__form {
     width: 50%;
