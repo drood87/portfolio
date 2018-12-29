@@ -24,3 +24,31 @@
 	margin-top: -15rem;
 	padding: 35rem 0 15rem 0;
 }
+.section-testomonials {
+	padding: 10rem 0;
+	position: relative;
+}
+.section-contact {
+	background-image: linear-gradient(
+		to right bottom,
+		$color-primary-greenish,
+		$color-secondary-blueish
+	);
+	padding: 15rem 0;
+}
+.contact {
+	background-image: linear-gradient(
+			105deg,
+			rgba($color-white, 0.9) 0%,
+			rgba($color-white, 0.9) 50%,
+			transparent 50%
+		),
+		url(../images/form1.jpg);
+	background-size: 100%;
+	border-radius: 3px;
+	height: 50rem;
+	&__form {
+		width: 50%;
+		padding: 6rem;
+	}
+}

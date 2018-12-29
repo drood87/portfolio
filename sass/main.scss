@@ -15,12 +15,16 @@ Tags: Portfolio, Website
 @import 'base/typography';
 @import 'base/utilities';
 
+@import 'components/bg-video';
 @import 'components/btn';
 @import 'components/card';
+@import 'components/form';
 @import 'components/project-gallery';
 @import 'components/service-box';
 @import 'components/social-bar';
+@import 'components/testimonial';
 
+@import 'layout/footer';
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/heading';
